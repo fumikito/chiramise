@@ -81,3 +81,17 @@ function chiramise_filter_content( $content ) {
 	}
 	return chiramise_split( $post );
 }
+
+/**
+ * Return readable content length with percentile.
+ *
+ * @param null|int|WP_Post $post
+ *
+ * @return int
+ */
+function chiramise_content_ratio( $post = null ) {
+	$post     = get_post( $post );
+	$total    = strlen( $post->post_content );
+	$segment  = strlen( chiramise_split( $post ) );
+	return (int) round( 100 - 100 * ( $segment / $total ) );
+}
