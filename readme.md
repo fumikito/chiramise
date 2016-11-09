@@ -24,6 +24,7 @@ Install itself is easy. Auto install from admin panel is recommended. Search wit
 
 1. Download and unpack plugin file, upload `chiramise` folder to `/wp-content/plugins` directory.
 2. Activate it from admin panel.
+3. Choose which post type to be 'chiramise' on 'Setting > General' on dmin panel.
 
 ### Use latest source on github
 
