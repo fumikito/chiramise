@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Conditional functions.
+ *
+ * @package chiramise
+ */
 
 /**
  * Detect if Chiramise supports this post type.
@@ -52,4 +56,22 @@ function chiramise_should_check( $post = null ) {
 		}
 	}
 	return false;
+}
+
+
+/**
+ * Detect if contents should be always filtered.
+ *
+ * @since 1.1.0
+ * @return bool
+ */
+function chiramise_always_filter() {
+	$should_always_filter = defined( 'CHIRAMISE_ALWAYS_FILTER' ) && CHIRAMISE_ALWAYS_FILTER;
+	/**
+	 * Detect if always filter if user is logged-in or not.
+	 *
+	 * @param bool $should_always_filter
+	 * @return bool
+	 */
+	return apply_filters( 'chiramise_always_filter', $should_always_filter );
 }

@@ -33,14 +33,30 @@ function chiramise_get_splitters( $post = null ) {
  * @return string
  */
 function chiramise_split( $post = null ) {
-	$post = get_post( $post );
-	$content = $post->post_content;
+	$segments = chiramise_get_segments( $post );
+	return $segments[0];
+}
+
+/**
+ * Get chunked segments.
+ *
+ * @param null|int|WP_Post $post
+ * @return string[]
+ */
+function chiramise_get_segments( $post = null ) {
+	$post      = get_post( $post );
+	$segments  = [ $post->post_content ];
 	$splitters = chiramise_get_splitters( $post );
 	foreach ( $splitters as $splitter ) {
-		$parsed  = explode( $splitter, $content );
-		$content = $parsed[0];
+		$parsed = [];
+		foreach ( $segments as $segment ) {
+			foreach ( explode( $splitter, $segment ) as $chunk ) {
+				$parsed[] = $chunk;
+			}
+		}
+		$segments = $parsed;
 	}
-	return $content;
+	return $segments;
 }
 
 /**
