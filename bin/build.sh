@@ -7,4 +7,6 @@ npm start
 curl -L https://raw.githubusercontent.com/fumikito/wp-readme/master/wp-readme.php | php
 
 rm -rf node_modules
-rm ./readme.md
+rm .travis.yml
+rm .gitignore
+rm readme.md
