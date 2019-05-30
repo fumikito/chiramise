@@ -4,7 +4,7 @@ Plugin Name: Chiramise
 Plugin URI: https://gianism.info/add-on/chiramise/
 Description: A WordPress plugin which makes your contents "members only".
 Author: Hametuha INC.
-Version: 1.1.1
+Version: 1.1.2
 PHP Version: 5.5.0
 Author URI: https://gianism.info/
 Text Domain: chiramise

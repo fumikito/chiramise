@@ -29,7 +29,7 @@ function chiramise_can_read( $post = null, $user_id = null ) {
 	if ( is_null( $user_id ) ) {
 		$user_id = get_current_user_id();
 	}
-	if ( chiramise_always_filter() ) {
+	if ( is_singular() && chiramise_always_filter() ) {
 		return false;
 	}
 	if ( ! chiramise_supported( $post->post_type ) ) {
