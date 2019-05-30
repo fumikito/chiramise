@@ -5,7 +5,7 @@ Tags: membership
 Requires at least: 5.0.0  
 Tested up to: 5.2.1  
 Requires PHP: 5.5  
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPL 2.0 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,10 @@ Sorry, no screen shots.
 ##  Changelog 
 
 Here is a list of change logs.
+
+### 1.1.1
+
+* Add filter for capability check for cached WordPress.
 
 ### 1.1.0
 
